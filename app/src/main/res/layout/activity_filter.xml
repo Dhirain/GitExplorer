@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dhirain.gitrepo.ui.filter.FilterActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_RL"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Filter"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/filter_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_clear" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_RL">
+
+        <TextView
+            android:id="@+id/sort_by_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="10dp"
+            android:text="Sort By"
+            android:textColor="@color/boldText"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/sort_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sort_by_tv"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/stars_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Stars"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+
+
+            <RadioButton
+                android:id="@+id/forks_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="forks"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/updated_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="updated"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/language_ll"
+            android:layout_below="@+id/sort_radiogroup"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_weight=".35"
+                android:text="Language"
+                android:gravity="center"
+                android:textColor="@color/boldText"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/filter_language"
+                android:layout_weight=".65"
+                android:layout_width="0dp"
+                android:hint="Java, Assembly etc"
+                android:textSize="16sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_by_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="10dp"
+            android:text="Order By"
+            android:layout_below="@+id/language_ll"
+            android:textColor="@color/boldText"
+            android:textSize="16sp" />
+        <RadioGroup
+            android:id="@+id/order_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_by_tv"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/asc_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Asc"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+
+
+            <RadioButton
+                android:id="@+id/desc_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="forks"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/filter_apply"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:background="@color/boldText"
+        android:text="Apply"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+</RelativeLayout>
